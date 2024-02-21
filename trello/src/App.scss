@@ -41,13 +41,27 @@ body {
 
     .board-columns {
         display: flex;
+        margin: 0 $gap $gap;
+        gap: 10px;
         overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+        &::-webkit-scrollbar:horizontal {
+            width: 11px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.24);
+            border-radius: 5px solid $list-bg-color;
+            border-radius: 10px;
+        }
 
         .column {
             flex: 0 0 auto;
             width: 300px;
             height: calc(100% - #{$gap});
-            margin-left: 10px;
+            // margin-left: 10px;
 
             >* {
                 background-color: $list-bg-color;
@@ -83,14 +97,14 @@ body {
                     -webkit-appearance: none;
                 }
                 &::-webkit-scrollbar:vertical {
-                    width: 11px;
+                    width: 16px;
                 }
                 &::-webkit-scrollbar-thumb {
                     background-color: #cacaca;
-                    border-right: 5px solid $list-bg-color;
+                    border: 4px solid transparent;
+                    border-radius: 8px;
+                    background-clip: padding-box;                
                 }
-
-
 
 
                 li {
