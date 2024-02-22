@@ -4,13 +4,14 @@ const Card = (props) => {
 	const {card} = props;
 	return (
 		<>
-			<li className='card-item'>
+			<div className='card-item'>
 				{card.image && 
 				<img className='card-cover' src={card.image}
 					alt='Design'
+					onMouseDown={event => event.preventDefault()}
 				/>}
 				{card.title}
-			</li>
+			</div>
 		</>
 	);
 };
