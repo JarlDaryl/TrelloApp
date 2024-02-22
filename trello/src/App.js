@@ -8,7 +8,6 @@ function App() {
 			<AppBar />
 			<BoardBar />
 			<BoardContent />
-
 		</div>
 	);
 }
